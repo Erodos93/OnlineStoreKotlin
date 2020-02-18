@@ -20,7 +20,7 @@ class HomeScreen : AppCompatActivity() {
         setContentView(R.layout.activity_home_screen)
 
 
-        var brandUrl = "http://10.1.0.94/OnlineStoreApp/fetch_brands.php"
+        var brandUrl = "http://10.1.8.10/OnlineStoreApp/fetch_brands.php"
         var brandList = ArrayList<String>()
         var requestBrand = Volley.newRequestQueue(this@HomeScreen)
         var arrayBrandRequest =

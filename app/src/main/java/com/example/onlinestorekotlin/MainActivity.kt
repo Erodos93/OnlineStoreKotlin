@@ -29,7 +29,7 @@ class MainActivity : AppCompatActivity() {
 
         activity_main_btnLogIn.setOnClickListener {
             val stringLoginUrl =
-                "http://10.1.0.94/OnlineStoreApp/login_app_user.php?email=" + edtEmail.text.toString() + "&pass=" + edtPassword.text.toString()
+                "http://10.1.8.10/OnlineStoreApp/login_app_user.php?email=" + edtEmail.text.toString() + "&pass=" + edtPassword.text.toString()
             val requestLoginQ: RequestQueue = Volley.newRequestQueue(this@MainActivity)
             val stringLogin =
                 StringRequest(Request.Method.GET, stringLoginUrl, Response.Listener { response ->

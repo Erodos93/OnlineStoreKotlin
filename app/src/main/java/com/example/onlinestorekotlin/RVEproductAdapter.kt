@@ -42,7 +42,7 @@ class RVEproductAdapter(var context: Context, var arrayList: ArrayList<EProducts
             itemView.txtId.text = pId.toString()
             itemView.txtName.text = pName
             itemView.txtPrice.text = p.toString()
-            var picUrl = "http://10.1.0.94/OnlineStoreApp/osimages/"
+            var picUrl = "http://10.1.8.10/OnlineStoreApp/osimages/"
             picUrl = picUrl.replace(" ", "%20")
             Picasso.get().load(picUrl + picName).into(itemView.imgProduct)
             itemView.txtAdd.setOnClickListener {

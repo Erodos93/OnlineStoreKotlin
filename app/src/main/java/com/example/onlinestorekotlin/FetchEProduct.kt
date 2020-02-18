@@ -21,7 +21,7 @@ class FetchEProduct : AppCompatActivity() {
         val selectedBrand = intent.getStringExtra("BRAND")
         txtBrand.text = "Product of $selectedBrand"
         val stringBrandUrl =
-            "http://10.1.0.94/OnlineStoreApp/brand_eproduct.php?brand=$selectedBrand"
+            "http://10.1.8.10/OnlineStoreApp/brand_eproduct.php?brand=$selectedBrand"
         var eproductArrayList = ArrayList<EProducts>()
         val requestBrandArray = Volley.newRequestQueue(this)
         val jsonAR = JsonArrayRequest(
