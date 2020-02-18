@@ -35,43 +35,19 @@ class CartProductActivity : AppCompatActivity() {
                                     " ${response.getJSONObject(jsonIndex).getString("email")}\n" +
                                     " ${response.getJSONObject(jsonIndex).getInt("amount")}"
                         )
-                        var adapter = ArrayAdapter(
-                            this@CartProductActivity,
-                            android.R.layout.simple_list_item_1, cartProductList
 
-                        )
-                        listView.adapter = adapter
 
                     }
+                    var cartProductAdapter = ArrayAdapter(
+                    this@CartProductActivity,
+                    android.R.layout.simple_list_item_1, cartProductList
+
+                )
+                    listView.adapter = cartProductAdapter
                 }, Response.ErrorListener { error ->
 
                 })
-        /* var cartarrayList = ArrayList<TemporaryCart>()
-         var requestCart = Volley.newRequestQueue(this@CartProductActivity)
-         var cartRequest =
-             JsonArrayRequest(Request.Method.GET, cartUrl, null, Response.Listener { response ->
-                 for (jsonIndex in 0.until(response.length())) {
-                     var jsonArrayList = response.getJSONObject(jsonIndex)
-
-                     cartarrayList.add(
-                         TemporaryCart(jsonArrayList.getInt("id").toInt(),
-                             jsonArrayList.getString("name").toString(),
-                             jsonArrayList.getInt("price").toInt(),
-                             jsonArrayList.getString("email").toString(),
-                             jsonArrayList.getInt("amount").toInt())
-
-                     )
-                     var adapter = ArrayAdapter(
-                         this@CartProductActivity,
-                         android.R.layout.simple_list_item_1, cartarrayList
-
-                     )
-                     listView.adapter = adapter
-                 }
-             }, Response.ErrorListener {
-
-             })
-         requestCart.add(cartRequest)*/
+        requestCart.add(cartRequest)
 
 
     }
