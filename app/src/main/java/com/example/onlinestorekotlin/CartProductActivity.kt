@@ -1,7 +1,10 @@
 package com.example.onlinestorekotlin
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.Menu
+import android.view.MenuItem
 import android.widget.ArrayAdapter
 import com.android.volley.Request
 import com.android.volley.Response
@@ -31,9 +34,9 @@ class CartProductActivity : AppCompatActivity() {
                         cartProductList.add(
                             "${response.getJSONObject(jsonIndex).getInt("id")}\n" +
                                     "${response.getJSONObject(jsonIndex).getString("name")}\n" +
-                                    " ${response.getJSONObject(jsonIndex).getInt("price")}\n" +
-                                    " ${response.getJSONObject(jsonIndex).getString("email")}\n" +
-                                    " ${response.getJSONObject(jsonIndex).getInt("amount")}"
+                                    "${response.getJSONObject(jsonIndex).getInt("price")}\n" +
+                                    "${response.getJSONObject(jsonIndex).getString("email")}\n" +
+                                    "${response.getJSONObject(jsonIndex).getInt("amount")}"
                         )
 
 
@@ -50,5 +53,21 @@ class CartProductActivity : AppCompatActivity() {
         requestCart.add(cartRequest)
 
 
+    }
+
+    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+        menuInflater.inflate(R.menu.cart_menu,menu)
+        return super.onCreateOptionsMenu(menu)
+
+
+
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        if (item?.itemId == R.id.continueShopingItem){
+            var intent = Intent(this@CartProductActivity,HomeScreen::class.java)
+            startActivity(intent)
+        }
+        return super.onOptionsItemSelected(item)
     }
 }
