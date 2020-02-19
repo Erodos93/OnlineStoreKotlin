@@ -12,11 +12,12 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-        <activity android:name=".FinalizeShoppingActivity"></activity>
+        <activity android:name=".ThankYouActivity"></activity>
+        <activity android:name=".FinalizeShoppingActivity" />
         <activity android:name=".CartProductActivity" />
         <activity android:name=".FetchEProduct" />
         <activity android:name=".brand_item_text_view" />
-        <activity android:name=".HomeScreen"></activity>
+        <activity android:name=".HomeScreen" />
         <activity android:name=".SignUpActivity" />
         <activity android:name=".MainActivity">
             <intent-filter>
