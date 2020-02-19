@@ -22,7 +22,7 @@ class CartProductActivity : AppCompatActivity() {
         setContentView(R.layout.activity_cart_product)
 
         var cartProductUrl =
-            "http://10.1.8.10/OnlineStoreApp/fench_temporary_order.php?email=${Person.email}"
+            "http://10.1.3.228/OnlineStoreApp/fench_temporary_order.php?email=${Person.email}"
         var cartProductList = ArrayList<String>()
         var requestCart = Volley.newRequestQueue(this@CartProductActivity)
         var cartRequest =
@@ -70,7 +70,7 @@ class CartProductActivity : AppCompatActivity() {
             startActivity(intent)
         } else if (item?.itemId == R.id.decline) {
             var deleteUrl =
-                "http://10.1.8.10/OnlineStoreApp/delete_data_from_cart.php?email=${Person.email}"
+                "http://10.1.3.228/OnlineStoreApp/delete_data_from_cart.php?email=${Person.email}"
             var requestQ = Volley.newRequestQueue(this@CartProductActivity)
             var stringRequest = StringRequest(Request.Method.GET, deleteUrl, Response.Listener {
                 var intent = Intent(this@CartProductActivity, HomeScreen::class.java)
