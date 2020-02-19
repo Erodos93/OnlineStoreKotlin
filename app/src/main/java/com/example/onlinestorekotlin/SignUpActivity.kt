@@ -22,7 +22,7 @@ class SignUpActivity : AppCompatActivity() {
 
             if (edtPassword.text.toString().equals(edtConfirmPass.text.toString())) {
 
-                val signUpURL = "http://10.1.8.10/OnlineStoreApp/join_new_user.php?email=" +
+                val signUpURL = "http://10.1.3.228/OnlineStoreApp/join_new_user.php?email=" +
                         edtEmail.text.toString() +
                         "&name=" + edtUserName.text.toString() +
                         "&pass=" + edtPassword.text.toString()

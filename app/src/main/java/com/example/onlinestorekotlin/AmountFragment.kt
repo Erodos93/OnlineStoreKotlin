@@ -30,7 +30,7 @@ class AmountFragment : android.app.DialogFragment() {
         var btnInsertAmount = fragmentView.findViewById<ImageButton>(R.id.btnDialogFragment)
         btnInsertAmount.setOnClickListener {
 
-            var amountOrderUrl = "http://10.1.8.10/OnlineStoreApp/insert_temporary_order.php?" +
+            var amountOrderUrl = "http://10.1.3.228/OnlineStoreApp/insert_temporary_order.php?" +
                     "email=${Person.email}" +
                     "&product_id=${Person.addToCartId}" +
                     "&amount=${edtEnterAmount.text.toString()}"

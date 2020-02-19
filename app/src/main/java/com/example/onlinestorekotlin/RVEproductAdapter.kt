@@ -32,17 +32,12 @@ class RVEproductAdapter(var context: Context, var arrayList: ArrayList<EProducts
 
     inner class ProductViewHolder(myView: View) : RecyclerView.ViewHolder(myView) {
 
-        /*var pIdTextView = myView.findViewById<TextView>(R.id.txtId)
-        var pNameTextView = myView.findViewById<TextView>(R.id.txtName)
-        var pPriceTextView = myView.findViewById<TextView>(R.id.txtPrice)*/
-
-//        var pPictureTextView = myView.findViewById<ImageView>(R.id.imgProduct)
 
         fun inicializationUI(pId: Int, pName: String, p: Int, picName: String) {
             itemView.txtId.text = pId.toString()
             itemView.txtName.text = pName
             itemView.txtPrice.text = p.toString()
-            var picUrl = "http://10.1.8.10/OnlineStoreApp/osimages/"
+            var picUrl = "http://10.1.3.228/OnlineStoreApp/osimages/"
             picUrl = picUrl.replace(" ", "%20")
             Picasso.get().load(picUrl + picName).into(itemView.imgProduct)
             itemView.txtAdd.setOnClickListener {
@@ -51,10 +46,6 @@ class RVEproductAdapter(var context: Context, var arrayList: ArrayList<EProducts
                 var fragmentManager =(itemView.context as Activity).fragmentManager
                 amountFragment.show(fragmentManager,"TAG")
             }
-            /*pIdTextView.text = pId.toString()
-            pNameTextView.text = pName
-            pPriceTextView.text = p.toString()
-            pPictureTextView.setImageResource(pp)*/
         }
 
     }
